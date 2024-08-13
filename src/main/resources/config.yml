@@ -1,0 +1,47 @@
+# Основные настройки плагина BroSalary
+# ＢｒｏｗｅｙＤＥＶ
+#  ██████╗░██████╗░░█████╗░░██████╗░█████╗░██╗░░░░░░█████╗░██████╗░██╗░░░██╗
+#  ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗██║░░░░░██╔══██╗██╔══██╗╚██╗░██╔╝
+#  ██████╦╝██████╔╝██║░░██║╚█████╗░███████║██║░░░░░███████║██████╔╝░╚████╔╝░
+#  ██╔══██╗██╔══██╗██║░░██║░╚═══██╗██╔══██║██║░░░░░██╔══██║██╔══██╗░░╚██╔╝░░
+#  ██████╦╝██║░░██║╚█████╔╝██████╔╝██║░░██║███████╗██║░░██║██║░░██║░░░██║░░░
+#  ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
+# Discord:  https://discord.gg/gEp9EXJCmq - Инфррмация О Плейсхолдерах и прочее там.
+# Сообщения
+messages:
+  no_permission: "&cУ вас нет прав на использование этой команды."
+  cooldown_reset: "&aКулдаун для игрока {target} был сброшен."
+  plugin_reloaded: "&aПлагин перезагружен."
+  player_not_found: "&cИгрок не найден."
+  no_group: "&cВы не состоите в какой-либо группе."
+  on_cooldown: "&cВы уже получили зарплату. Следующая зарплата будет доступна через &6%time%."
+  no_payment_system: "&cНе настроена система зарплаты для вашей группы."
+  no_cooldown: "&aВремя ожидания закончилось, вы можете получить зарплату."
+
+# Настройки групп
+groups:
+  default:
+    cooldown: 86400 # Время кд в секундах
+    amount: 100 # Сумма зарплаты
+    payment_system: "Vault" # Система зарплаты (Vault, PlayerPoints или command)
+    salary_received_message: "Вы получили зарплату в размере %amount% монет!"
+    success_sound: "ENTITY_PLAYER_LEVELUP" # Звук при успешном получении зарплаты
+    cooldown_sound: "BLOCK_NOTE_BLOCK_BASS" # Звук при попытке получить зарплату во время кулдауна
+
+  vip:
+    cooldown: 43200 # Время кд в секундах
+    amount: 250 # Сумма зарплаты
+    payment_system: "command" # Система зарплаты (Vault, PlayerPoints или command)
+    command: "Beco give {player} {amount}"
+    salary_received_message: "Вы получили зарплату в размере %amount% beco!"
+    success_sound: "ENTITY_PLAYER_LEVELUP" # Звук при успешном получении зарплаты
+    cooldown_sound: "BLOCK_NOTE_BLOCK_BASS" # Звук при попытке получить зарплату во время кулдауна
+
+  premium:
+    cooldown: 21600 # Время кд в секундах
+    amount: 500.0 # Сумма зарплаты
+    payment_system: "command" # Система зарплаты (Vault, PlayerPoints или command)
+    command: "Beco give {player} {amount}" # Команда для выдачи зарплаты (если указана система оплаты "command")
+    salary_received_message: "Вы получили зарплату в размере %amount% поинтов!"
+    success_sound: "ENTITY_PLAYER_LEVELUP" # Звук при успешном получении зарплаты
+    cooldown_sound: "BLOCK_NOTE_BLOCK_BASS" # Звук при попытке получить зарплату во время кулдауна

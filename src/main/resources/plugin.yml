@@ -1,0 +1,14 @@
+name: BroSalary
+version: '${version}'
+main: ua.browey.brosalary.BroSalary
+api-version: '1.16'
+commands:
+  salary:
+
+depend:
+  - LuckPerms
+
+softdepend:
+  - Vault
+  - PlayerPoints
+  - PlaceholderAPI
